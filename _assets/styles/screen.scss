@@ -1,3 +1,5 @@
+@import "settings";
+
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -99,6 +101,8 @@ input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
 
+@import "syntax";
+
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -107,18 +111,18 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Import the font file with the icons in it */
 @font-face {
     font-family: "casper-icons";
-    src:url("../fonts/casper-icons.eot?v=1");
-    src:url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
-    url("../fonts/casper-icons.woff?v=1") format("woff"),
-    url("../fonts/casper-icons.ttf?v=1") format("truetype"),
-    url("../fonts/casper-icons.svg?v=1#icons") format("svg");
+    src:url($fonts-path + "casper-icons.eot?v=1");
+    src:url($fonts-path + "casper-icons.eot?v=1#iefix") format("embedded-opentype"),
+    url($fonts-path + "casper-icons.woff?v=1") format("woff"),
+    url($fonts-path + "casper-icons.ttf?v=1") format("truetype"),
+    url($fonts-path + "casper-icons.svg?v=1#icons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", $body-font-family;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -212,7 +216,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     text-rendering: geometricPrecision;
 }
 
@@ -699,7 +703,7 @@ body.nav-opened .nav {
     color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     font-size: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 35px;
@@ -871,7 +875,7 @@ body.nav-opened .nav {
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     color: #fff;
 }
 
@@ -962,7 +966,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1397,7 +1401,7 @@ body:not(.post-template) .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;
@@ -1488,7 +1492,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1572,7 +1576,7 @@ body:not(.post-template) .post-title {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 1rem 15px;
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;

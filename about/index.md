@@ -3,7 +3,7 @@ layout: page
 title: About
 class: 'post'
 navigation: True
-logo: 'assets/images/ghost-white.png'
+logo: 'assets/img/ghost-white.png'
 current: about
 ---
 
